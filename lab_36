@@ -1,15 +1,9 @@
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+from selenium import webdriver
 
-public class Main {
-    public static void main(String[] args) {
+driver = webdriver.Chrome()
 
-        WebDriver driver = new ChromeDriver();
+driver.get("https://arms.srmist.edu.in/")
 
-        driver.get("https://arms.srmist.edu.in/");
+print("Title:", driver.title)
 
-        System.out.println("Title: " + driver.getTitle());
-
-        driver.quit();
-    }
-}
+driver.quit()
